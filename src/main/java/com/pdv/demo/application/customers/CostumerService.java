@@ -1,8 +1,6 @@
 package com.pdv.demo.application.customers;
 
 import com.pdv.demo.core.customers.ICustomerUseCase;
-import com.pdv.demo.core.customers.ICustomerRepository;
-import com.pdv.demo.core.customers.entities.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

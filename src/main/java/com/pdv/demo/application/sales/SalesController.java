@@ -1,5 +1,6 @@
 package com.pdv.demo.application.sales;
 
+import com.pdv.demo.core.products.entities.ISalesUseCase;
 import com.pdv.demo.core.sales.entities.Sale;
 import com.pdv.demo.application.sales.dtos.SaleDto;
 import io.swagger.v3.oas.annotations.Operation;

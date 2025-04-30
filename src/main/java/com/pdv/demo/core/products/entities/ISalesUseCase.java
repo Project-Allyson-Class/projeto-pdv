@@ -1,4 +1,4 @@
-package com.pdv.demo.core.sales;
+package com.pdv.demo.core.products.entities;
 
 import com.pdv.demo.core.sales.entities.Sale;
 

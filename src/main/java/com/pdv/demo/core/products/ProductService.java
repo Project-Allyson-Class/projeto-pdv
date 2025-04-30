@@ -1,6 +1,7 @@
 package com.pdv.demo.core.products;
 
 import com.pdv.demo.application.products.dtos.ProductDto;
+import com.pdv.demo.core.products.entities.ISalesUseCase;
 import com.pdv.demo.core.products.entities.Product;
 import com.pdv.demo.infra.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,5 +52,33 @@ public class ProductService implements IProductsUseCase {
     @Override
     public void delete(UUID id) {
         repository.deleteById(id);
+    }
+
+    @Service
+    public static class SalesService implements ISalesUseCase {
+
+        @Autowired
+        private ISalesRepository salesRepository;
+
+        @Override
+        public Sale create(Sale sale) {
+            // Aqui você pode adicionar regras de negócio, validações, etc.
+            return salesRepository.save(sale);
+        }
+
+        @Override
+        public List<Sale> getAll() {
+            return salesRepository.findAll();
+        }
+
+        @Override
+        public Sale getById(UUID id) {
+            return salesRepository.findById(id);
+        }
+
+        @Override
+        public void delete(UUID id) {
+            salesRepository.delete(id);
+        }
     }
 }
