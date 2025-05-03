@@ -1,6 +1,7 @@
 package com.pdv.demo.application.sales;
 
 import com.pdv.demo.core.products.entities.ISalesUseCase;
+import com.pdv.demo.core.sales.entites.Sale;
 import com.pdv.demo.core.sales.entities.Sale;
 import com.pdv.demo.application.sales.dtos.SaleDto;
 import io.swagger.v3.oas.annotations.Operation;
@@ -18,7 +19,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/sales")
-public class SalesController {
+public class SaleController {
 
     @Autowired
     private ISalesUseCase salesService;
